@@ -1,7 +1,7 @@
 /* eslint no-new: off, @typescript-eslint/explicit-function-return-type: off */
 
-import { setUpReplicants } from '@nodecg-vue-ts-template/browser_shared/replicant_store';
-import vuetify from '@nodecg-vue-ts-template/_misc/vuetify';
+import { setUpReplicants } from '@klonoa_wahoo_allstar_speedrun_layouts/browser_shared/replicant_store';
+import vuetify from '@klonoa_wahoo_allstar_speedrun_layouts/_misc/vuetify';
 import Vue from 'vue';
 import App from './main.vue';
 import store from './store';

@@ -1,17 +1,17 @@
 {
-  "name": "nodecg-vue-ts-template",
+  "name": "klonoa_wahoo_allstar_speedrun_layouts",
   "version": "1.0.0",
-  "description": "Template for NodeCG bundles that use Vue.js and TypeScript.",
-  "homepage": "https://github.com/zoton2/nodecg-vue-ts-template#readme",
+  "description": "The on-stream layouts for Klonoa Wahoo Allstar Speedrun",
+  "homepage": "https://github.com/yagamuu/klonoa_wahoo_allstar_speedrun_layouts",
   "bugs": {
-    "url": "https://github.com/zoton2/nodecg-vue-ts-template/issues"
+    "url": "https://github.com/yagamuu/klonoa_wahoo_allstar_speedrun_layouts/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zoton2/nodecg-vue-ts-template.git"
+    "url": "git+https://github.com/yagamuu/klonoa_wahoo_allstar_speedrun_layouts.git"
   },
   "license": "MIT",
-  "author": "zoton2",
+  "author": "yagamuu",
   "scripts": {
     "autofix": "run-s autofix:*",
     "autofix:browser": "eslint --fix --ext .ts,.vue src/dashboard && eslint --fix --ext .ts,.vue src/graphics && eslint --fix --ext .ts,.vue src/browser_shared",

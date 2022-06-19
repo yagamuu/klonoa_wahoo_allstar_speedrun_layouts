@@ -133,3 +133,7 @@ dist
 /dashboard/
 /extension/
 /graphics/
+
+# Development files
+/db/
+/cfg/ 

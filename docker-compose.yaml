@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  nodecg:
+    build: .
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./:/nodecg/bundles/klonoa_wahoo_allstar_speedrun_layouts
+      - ./cfg:/nodecg/cfg
+      - ./db:/nodecg/db

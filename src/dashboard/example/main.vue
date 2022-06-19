@@ -8,11 +8,11 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import type { ExampleType } from '@nodecg-vue-ts-template/types';
-import type { ExampleReplicant } from '@nodecg-vue-ts-template/types/schemas';
-import type { Configschema } from '@nodecg-vue-ts-template/types/schemas/configschema';
+import type { ExampleType } from '@klonoa_wahoo_allstar_speedrun_layouts/types';
+import type { ExampleReplicant } from '@klonoa_wahoo_allstar_speedrun_layouts/types/schemas';
+import type { Configschema } from '@klonoa_wahoo_allstar_speedrun_layouts/types/schemas/configschema';
 import { Getter } from 'vuex-class';
-// import { replicantNS } from '@nodecg-vue-ts-template/browser_shared/replicant_store';
+// import { replicantNS } from '@klonoa_wahoo_allstar_speedrun_layouts/browser_shared/replicant_store';
 import { storeModule } from './store';
 
 @Component
