@@ -82,18 +82,43 @@
   },
   "nodecg": {
     "compatibleRange": "^1.8.1",
-    "dashboardPanels": [
-      {
-        "name": "example",
-        "title": "Example",
-        "file": "example.html"
-      }
-    ],
+    "bundleDependencies": {
+      "nodecg-speedcontrol": "^2.4.0"
+    },
     "graphics": [
       {
-        "file": "example.html",
+        "file": "Setup.html",
         "width": 1920,
         "height": 1080
+      }
+    ],
+    "assetCategories": [
+      {
+        "name": "layoutBg",
+        "title": "Layout Background Image",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "png"
+        ]
+      },
+      {
+        "name": "setupLayoutLogo",
+        "title": "Setup Layout Logo Image",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "png"
+        ]
+      },
+      {
+        "name": "gameLayoutLogo",
+        "title": "Game Layout Logo Image",
+        "allowedTypes": [
+          "jpg",
+          "jpeg",
+          "png"
+        ]
       }
     ]
   }

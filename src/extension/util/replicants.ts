@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 
-import type { ExampleReplicant } from '@klonoa_wahoo_allstar_speedrun_layouts/types/schemas';
+// import type { ExampleReplicant } from '@kwas_layouts/types/schemas';
 import { get as nodecg } from './nodecg';
 
 /**
@@ -10,4 +10,4 @@ import { get as nodecg } from './nodecg';
 
 // YOU CAN REMOVE THIS RULE WHEN YOU GET MULTIPLE REPLICANTS!
 // eslint-disable-next-line import/prefer-default-export
-export const exampleReplicant = nodecg().Replicant<ExampleReplicant>('exampleReplicant');
+// export const exampleReplicant = nodecg().Replicant<ExampleReplicant>('exampleReplicant');

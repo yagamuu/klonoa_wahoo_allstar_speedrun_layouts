@@ -1,0 +1,147 @@
+.main {
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+
+.information-box {
+  width: 640px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  height: 100vh;
+  padding-top: 160px;
+}
+
+.broadcast-information {
+  position: relative;
+}
+
+.broadcast-canvas {
+  width: 1280px;
+  background: red;
+  height: 960px;
+}
+
+.picture {
+  width: 600px;
+  position: absolute;
+  bottom: 15px;
+}
+
+.commentator-information {
+  background-color: rgba(255,255,255,.7);
+  height: 300px;
+  margin-bottom: 30px;
+  width: 600px;
+  position: absolute;
+  bottom: 340px;
+}
+
+.gametitle {
+  height: 230px;
+  background-color: rgba(255,255,255,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: rgb(255, 230, 0);
+  text-shadow:2px 2px 0 #143c7d, -2px -2px 0 #143c7d,
+  -2px 2px 0 #143c7d, 2px -2px 0 #143c7d,
+  0px 2px 0 #143c7d,  0 -2px 0 #143c7d,
+  -2px 0 0 #143c7d, 2px 0 0 #143c7d;
+}
+
+.gametitle p {
+  font-size: 45px;
+  line-height: 1.4;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.gametitle span {
+  font-size: 30px;
+  line-height: 1.4;
+}
+
+
+.category-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.broadcast-information-footer {
+  display: flex;
+  height: 120px;
+  background: rgba(255,255,255,.8);
+  position: absolute;
+  bottom:0;
+  width:1280px;
+}
+
+.runner {
+  font-size: 40px;
+  width: 60%;
+  padding: 20px 30px;
+  border-right: #143c7d solid 2px;
+  line-height: 60px;
+  color: rgb(255, 230, 0);
+  text-shadow:2px 2px 0 #143c7d, -2px -2px 0 #143c7d,
+  -2px 2px 0 #143c7d, 2px -2px 0 #143c7d,
+  0px 2px 0 #143c7d,  0 -2px 0 #143c7d,
+  -2px 0 0 #143c7d, 2px 0 0 #143c7d;
+  display: flex;
+  align-items: center;
+}
+
+.runner span {
+  line-height: 60px;
+  display: inline-block;
+}
+
+.time {
+  font-size: 50px;
+  width: 40%;
+  padding: 20px 20px;
+  line-height: 60px;
+  position: relative;
+  color: rgb(255, 230, 0);
+  text-shadow:2px 2px 0 #143c7d, -2px -2px 0 #143c7d,
+  -2px 2px 0 #143c7d, 2px -2px 0 #143c7d,
+  0px 2px 0 #143c7d,  0 -2px 0 #143c7d,
+  -2px 0 0 #143c7d, 2px 0 0 #143c7d;
+  display: flex;
+  flex-direction: column;
+}
+
+.time span {
+  line-height: 32px;
+  display: inline-block;
+  font-size: 32px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.logo_area {
+  justify-content: center;
+  width: 640px;
+  top:-20px;
+}
+
+.logo_area .logo {
+  width: calc(100% - 50px);
+  height: auto;
+  margin-left: 0;
+  
+}
+
+
+#container {
+  background-color: rgba(248, 235, 0, 0.9);
+  background-color: rgba(1, 173, 221, 0.7);
+  min-height: 100vh;
+  position: relative;
+}

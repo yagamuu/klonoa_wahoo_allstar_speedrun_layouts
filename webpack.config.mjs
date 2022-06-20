@@ -176,6 +176,6 @@ const config = (name) => {
 }
 
 export default [
-  config('dashboard'),
+  // config('dashboard'),
   config('graphics'),
 ];

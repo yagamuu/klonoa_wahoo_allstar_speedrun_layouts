@@ -1,4 +1,5 @@
-import type { ExampleReplicant } from '@klonoa_wahoo_allstar_speedrun_layouts/types/schemas';
+import type { RunDataActiveRun } from '@kwas_layouts/types/schemas/speedcontrol';
+import type { Assets } from '@kwas_layouts/types/schemas/assets';
 import clone from 'clone';
 import type { ReplicantBrowser } from 'nodecg/types/browser';
 import Vue from 'vue';
@@ -8,15 +9,24 @@ import { getModule, Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
 // Declaring replicants.
 export const reps: {
-  exampleReplicant: ReplicantBrowser<ExampleReplicant>;
+  runDataActiveRunReplicant: ReplicantBrowser<RunDataActiveRun>;
+  layoutBgAssetsReplicant: ReplicantBrowser<Assets>;
+  gameLayoutLogoAssetsReplicant: ReplicantBrowser<Assets>;
+  setupLayoutLogoAssetsReplicant: ReplicantBrowser<Assets>;
   [k: string]: ReplicantBrowser<unknown>;
 } = {
-  exampleReplicant: nodecg.Replicant('exampleReplicant'),
+  runDataActiveRunReplicant: nodecg.Replicant('runDataActiveRun', 'nodecg-speedcontrol'),
+  layoutBgAssetsReplicant: nodecg.Replicant('assets:layoutBg'),
+  gameLayoutLogoAssetsReplicant: nodecg.Replicant('assets:setupLayoutLogo'),
+  setupLayoutLogoAssetsReplicant: nodecg.Replicant('assets:gameLayoutLogo'),
 };
 
 // All the replicant types.
 export interface ReplicantTypes {
-  exampleReplicant: ExampleReplicant;
+  runDataActiveRunReplicant: RunDataActiveRun;
+  layoutBgAssetsReplicant: Assets;
+  gameLayoutLogoAssetsReplicant: Assets;
+  setupLayoutLogoAssetsReplicant: Assets;
 }
 
 @Module({ name: 'ReplicantModule', namespaced: true })
