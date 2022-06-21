@@ -10,7 +10,6 @@
           <div class="middle_container"/>
           <setup-schedule/>
         </div>
-        <p class="bgm_title"/>
     </div>
   </div>
 </template>
