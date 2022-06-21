@@ -90,6 +90,21 @@
         "file": "Setup.html",
         "width": 1920,
         "height": 1080
+      },
+      {
+        "file": "4x3.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "GBA.html",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "file": "WS.html",
+        "width": 1920,
+        "height": 1080
       }
     ],
     "assetCategories": [

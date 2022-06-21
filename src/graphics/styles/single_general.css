@@ -145,3 +145,11 @@
   min-height: 100vh;
   position: relative;
 }
+
+#gameLayoutRoot {
+  font-family: 'RocknRoll One', sans-serif;
+  background-size: cover;
+  min-height: 100vh;
+  color: #111;
+  overflow-y: hidden;
+}

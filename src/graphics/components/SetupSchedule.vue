@@ -21,10 +21,7 @@ import { Getter } from 'vuex-class';
 import { RunDataActiveRun } from '@kwas_layouts/types/schemas/speedcontrol';
 import * as util from '@kwas_layouts/graphics/util/format';
 
-@Component({
-  components: {
-  },
-})
+@Component
 export default class SetupSchedule extends Vue {
   @Getter readonly runDataActiveRunReplicant!: RunDataActiveRun;
 

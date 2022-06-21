@@ -1,4 +1,4 @@
-import type { RunDataActiveRun } from '@kwas_layouts/types/schemas/speedcontrol';
+import type { RunDataActiveRun, Timer } from '@kwas_layouts/types/schemas/speedcontrol';
 import type { Assets } from '@kwas_layouts/types/schemas/assets';
 import clone from 'clone';
 import type { ReplicantBrowser } from 'nodecg/types/browser';
@@ -13,12 +13,14 @@ export const reps: {
   layoutBgAssetsReplicant: ReplicantBrowser<Assets>;
   gameLayoutLogoAssetsReplicant: ReplicantBrowser<Assets>;
   setupLayoutLogoAssetsReplicant: ReplicantBrowser<Assets>;
+  timerReplicant: ReplicantBrowser<Timer>;
   [k: string]: ReplicantBrowser<unknown>;
 } = {
   runDataActiveRunReplicant: nodecg.Replicant('runDataActiveRun', 'nodecg-speedcontrol'),
   layoutBgAssetsReplicant: nodecg.Replicant('assets:layoutBg'),
   gameLayoutLogoAssetsReplicant: nodecg.Replicant('assets:setupLayoutLogo'),
   setupLayoutLogoAssetsReplicant: nodecg.Replicant('assets:gameLayoutLogo'),
+  timerReplicant: nodecg.Replicant('timer', 'nodecg-speedcontrol'),
 };
 
 // All the replicant types.
@@ -27,6 +29,7 @@ export interface ReplicantTypes {
   layoutBgAssetsReplicant: Assets;
   gameLayoutLogoAssetsReplicant: Assets;
   setupLayoutLogoAssetsReplicant: Assets;
+  timerReplicant: Timer;
 }
 
 @Module({ name: 'ReplicantModule', namespaced: true })

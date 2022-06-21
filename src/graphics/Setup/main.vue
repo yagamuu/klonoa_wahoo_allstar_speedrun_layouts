@@ -3,9 +3,7 @@
     <div class="setup-background-img animation" :style="bgStyle"/>
     <div class="setup-background-img animation2" :style="bgStyle"/>
     <div class="container-inner">
-        <div class="logo_area">
-          <p class="logo"><img class="logo-img" :src="logoUri"></p>
-        </div>
+        <logo :backgroundAssets="setupLayoutLogoAssetsReplicant"/>
         <div class="main">
           <div class="middle_container"/>
           <setup-schedule/>
@@ -18,11 +16,13 @@
 import { Vue, Component } from 'vue-property-decorator';
 import { Getter } from 'vuex-class';
 import type { Assets } from '@kwas_layouts/types/schemas/assets';
+import Logo from '../components/Logo.vue';
 import SetupSchedule from '../components/SetupSchedule.vue';
 
 @Component({
   components: {
     SetupSchedule,
+    Logo,
   },
 })
 export default class extends Vue {
@@ -35,10 +35,6 @@ export default class extends Vue {
     return {
       backgroundImage: uri,
     };
-  }
-
-  get logoUri(): string {
-    return this.setupLayoutLogoAssetsReplicant[0]?.url || '';
   }
 }
 </script>
