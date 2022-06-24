@@ -84,16 +84,16 @@
 .runner {
   font-size: 40px;
   width: 60%;
-  padding: 20px 30px;
+  padding: 10px 30px;
   border-right: #143c7d solid 2px;
-  line-height: 60px;
+  line-height: 40px;
   color: rgb(255, 230, 0);
   text-shadow:2px 2px 0 #143c7d, -2px -2px 0 #143c7d,
   -2px 2px 0 #143c7d, 2px -2px 0 #143c7d,
   0px 2px 0 #143c7d,  0 -2px 0 #143c7d,
   -2px 0 0 #143c7d, 2px 0 0 #143c7d;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
 
 .runner span {
@@ -152,4 +152,28 @@
   min-height: 100vh;
   color: #111;
   overflow-y: hidden;
+}
+
+.runner_sns {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.runner_sns span {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.runner_sns p {
+  position: absolute;
+  opacity: 0;
+  transition: .8s;
+}
+
+.runner_sns p.active { 
+  opacity: 1;
+}
+
+.runner_sns p span {
+  margin-left: 10px;
 }

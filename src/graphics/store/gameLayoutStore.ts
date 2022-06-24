@@ -2,7 +2,7 @@ import { ReplicantModule, ReplicantTypes } from '@kwas_layouts/browser_shared/re
 import type { Assets } from '@kwas_layouts/types/schemas/assets';
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';
-import { getModule, Module, VuexModule } from 'vuex-module-decorators';
+import { getModule, Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import type { RunDataActiveRun, Timer } from '@kwas_layouts/types/schemas/speedcontrol';
 
 Vue.use(Vuex);
@@ -10,6 +10,30 @@ Vue.use(Vuex);
 @Module({ name: 'OurModule' })
 class GameLayoutModule extends VuexModule {
   // Helper getter to return all replicants.
+
+  displaySNSInformationState = 0;
+
+  get displaySNSInformation() {
+    return this.displaySNSInformationState;
+  }
+
+  get existSocials(): string[] {
+    const socials = [];
+
+    if (this.runDataActiveRunReplicant?.customData.player_twitch) {
+      socials.push('twitch');
+    }
+    if (this.runDataActiveRunReplicant?.customData.player_twitter) {
+      socials.push('twitter');
+    }
+
+    return socials;
+  }
+
+  get currentSocial(): string {
+    return this.existSocials[this.displaySNSInformation] || '';
+  }
+
   get reps(): ReplicantTypes {
     return this.context.rootState.ReplicantModule.reps;
   }
@@ -28,6 +52,16 @@ class GameLayoutModule extends VuexModule {
 
   get timerReplicant(): Timer {
     return this.reps.timerReplicant;
+  }
+
+  @Mutation
+  NEXT_DISPLAY_SNS_INFORMATION(exists: string[]): void {
+    this.displaySNSInformationState = (this.displaySNSInformationState + 1) % exists.length;
+  }
+
+  @Action
+  nextDisplaySNSInformation(): void {
+    this.NEXT_DISPLAY_SNS_INFORMATION(this.existSocials);
   }
 }
 
